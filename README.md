@@ -2,7 +2,7 @@
 
 
 
-Implemented using ASP.NET WEB API to deploy this REST API on Microsoft Azure. Here is the website https://rocketelevators1.azurewebsites.net
+Implemented using ASP.NET WEB API to deploy this REST API on Haroku: https://rocket-rest-ap.herokuapp.com/
 
 
 

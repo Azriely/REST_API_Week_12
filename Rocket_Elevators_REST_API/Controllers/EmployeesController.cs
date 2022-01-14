@@ -58,8 +58,15 @@ namespace Rocket_Elevators_REST_API.Controllers
                 }
             }
 
-            return isValid;
-        }
+            if (isValid)
+                        {
+                            return isValid;
+                        }
+                    else
+                        {
+                            return NotFound();
+                        }
+}
 
 
         [Produces("application/json")]

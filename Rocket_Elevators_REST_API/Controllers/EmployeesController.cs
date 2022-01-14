@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using TodoApi.Models;
-namespace TodoApi.Controllers
+using Rocket_Elevators_REST_API.Models;
+
+namespace Rocket_Elevators_REST_API.Controllers
 {
     [Route("[controller]")]
     [ApiController]

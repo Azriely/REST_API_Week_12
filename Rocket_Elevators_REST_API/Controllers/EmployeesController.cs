@@ -28,28 +28,6 @@ namespace Rocket_Elevators_REST_API.Controllers
             return await _context.Employees.ToListAsync();
         }
 
-        [Produces("application/json")]
-                [HttpGet("{email}")]
-                public async Task<IActionResult> GetSpect(string email)
-                {
-                    try
-                    {
-                        var products = _context.Employees.Where(b => b.Email == email)
-                            .FirstOrDefault();
-                        if (products == null)
-                            {
-                                return NotFound();
-                            }
-                        else
-                            {
-                                return Ok(products);
-                            }
-                    }
-                    catch
-                    {
-                        return BadRequest();
-                    }
-                }
 
         //GET:Employees/id
         [HttpGet("{id}")]
@@ -84,7 +62,28 @@ namespace Rocket_Elevators_REST_API.Controllers
         }
 
 
-
+        [Produces("application/json")]
+        [HttpGet("{email}")]
+        public async Task<IActionResult> GetSpect(string email)
+        {
+            try
+            {
+                var products = _context.Employees.Where(b => b.Email == email)
+                    .FirstOrDefault();
+                if (products == null)
+                    {
+                        return NotFound();
+                    }
+                else
+                    {
+                        return Ok(products);
+                    }
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
         //-----------------------------------------------------------------------------------------\\
 
         private bool EmployeesExists(string email)
